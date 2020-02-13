@@ -1,0 +1,50 @@
+/*
+@import './Abstracts/variable';
+@import './Base/animations';
+@import './Base/base';
+@import './Base/typogaphy';
+@import './Components/buttons';
+@import './Layout/header';
+@import './Layout/grid';
+@import './Pages/home';
+@import './Base/utilities';
+@import './Components/composition';
+@import './Components/skill-box';
+@import './Components/card';
+*/
+
+@import './Abstracts/variable';
+@import './Base/base';
+@import './Base/typogaphy';
+@import './Components/buttons';
+@import './Layout/header';
+@import './Pages/home';
+@import './Components/composition';
+@import './Components/card';
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777777;
+}
+
+.footer {
+    padding-top: 8rem;
+    padding-bottom: 4.5rem;
+    &__menu ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        a:hover {
+            text-decoration: none;
+            color: $color-secondary-light;
+        }
+        a {
+            color: #777777;
+        }
+        li {
+            padding: 2rem;
+        }
+    }
+}

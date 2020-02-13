@@ -1,0 +1,225 @@
+/*
+@import './Abstracts/variable';
+@import './Base/animations';
+@import './Base/base';
+@import './Base/typogaphy';
+@import './Components/buttons';
+@import './Layout/header';
+@import './Layout/grid';
+@import './Pages/home';
+@import './Base/utilities';
+@import './Components/composition';
+@import './Components/skill-box';
+@import './Components/card'; 
+*/
+
+.clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@import './Abstracts/variable';
+@import './Base/base';
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777777;
+}
+
+.header {
+    background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h3-img-02.jpg);
+    height: 90vh;
+    position: relative;
+    background-position: center;
+    &__top-bar {
+        color: #1e1e1e;
+        font-size: 1.6rem;
+        font-family: 'Crimson Text', serif;
+        font-weight: 400;
+        padding: 0.6rem 0;
+        background-color: #ECEBE1;
+    }
+}
+
+.position-contact {
+    font-style: italic;
+    float: left;
+    a {
+        color: #1e1e1e;
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+.position-social-icon {
+    color: #1e1e1e;
+    float: right;
+    p {
+        font-style: italic;
+        margin-bottom: 0rem;
+    }
+    a {
+        align-items: center;
+        font-size: 1.1rem;
+        color: #1e1e1e;
+    }
+    a:not(:last-child) {
+        margin-right: 1.4rem;
+    }
+    a:first-child {
+        margin-left: 1.2rem;
+    }
+}
+
+
+/*  End Top header */
+
+
+/* banner*/
+
+.heading-primary {
+    color: rgb(135, 135, 135);
+    width: 46rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 14%;
+    position: relative;
+    left: 1rem;
+    transition: all 0.1s;
+    animation: moveInRight 1s ease-out;
+    &--main {
+        font-family: Oswald, sans-serif;
+        color: #1e1e1e;
+        text-transform: uppercase;
+        display: block;
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 1.12em;
+        letter-spacing: -.01em;
+        margin: 0 0 1rem;
+    }
+    &--sub {
+        font-family: Muli;
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: left;
+        line-height: 2.8rem;
+        letter-spacing: 0px;
+        font-weight: 600;
+        border-style: none;
+        margin: 0;
+        padding: 0;
+        color: rgb(135, 135, 135);
+        text-decoration: none;
+        white-space: normal;
+        display: block;
+    }
+}
+
+
+/* end right banner */
+
+.composition {
+    position: relative;
+    &__layer-wrap {
+        position: absolute;
+        z-index: 10;
+        transition: all 2s;
+        &--p1 {
+            top: 8rem;
+            left: 3rem;
+            animation: moveInLeft .6s ease-in;
+        }
+        &--p2 {
+            top: 11rem;
+            left: 18rem;
+            animation: moveInBottom .3s ease-out;
+        }
+        &--p3 {
+            top: 8rem;
+            left: 13rem;
+            z-index: 50;
+            width: 45rem;
+            animation: moveInLeft .7s ease-in;
+        }
+        &--p4 {
+            top: 4rem;
+            right: 15rem;
+            animation: moveInRight 1s ease-out;
+        }
+        &--p5 {
+            animation: moveInBottom .8s ease-out;
+            top: 29rem;
+            left: 5rem;
+        }
+        &--p6 {
+            top: 16rem;
+            right: 5rem;
+            animation: moveInRight 1.5s ease-out;
+        }
+        &--p7 {
+            top: 25rem;
+            right: -2rem;
+            animation: moveInTop .5s ease-in;
+        }
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+    80% {
+        transform: translateX(1rem)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translateX(-1rem)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-15rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* left banner */
